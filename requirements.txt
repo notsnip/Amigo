@@ -1,0 +1,5 @@
+bardapi
+keyboard
+pyautogui
+selenium
+pyperclip
