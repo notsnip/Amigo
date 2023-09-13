@@ -56,5 +56,5 @@ pip install --r requirements.txt
 #### If you wish to use Bard as your default Brain Engine, you can consider reading this section.
 
 ```bash
-Documentation of this section in under development.
+Documentation of this section is under development.
 ```
