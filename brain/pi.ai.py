@@ -234,7 +234,7 @@ Introduction()
 
 while True:
 
-    Query = input("Enter Your Query :")
+    # Query = input("Enter Your Query :")
     File = open("assest\\piHistory.txt","r")
     DataRead = File.read()
     File.close()
@@ -246,26 +246,57 @@ while True:
         driver.refresh()
         driver.refresh()
         sleep(2)
-        QuerySender(Query=Query)
+        QuerySender(Query=Data)
         ButtonClicker()
-        CheckBackSoon(Query=Query)
+        CheckBackSoon(Query=Data)
         NotNowChecker()
-        AnswerReturn(Query=Query)
+        AnswerReturn(Query=Data)
         FileReadNow = open("assest\\piHistory.txt","w")
         FileReadNow.write('1')
         FileReadNow.close()
-        
     else:
-        try:
-            QuerySender(Query=Query)
-            ButtonClicker()
-            CheckBackSoon(Query=Query)
-            NotNowChecker()
-            AnswerReturn(Query=Query)
-            FileReadNow = open("assest\\piHistory.txt","w")
-            NewDataRead = int(DataRead) + 1
-            FileReadNow.write(str(NewDataRead))
-            FileReadNow.close()
+     try:
 
-        except Exception as e:
-            print(e)
+        File = open("assest\\speech.txt","r")
+        Data = File.read()
+        File.close()
+        FileHistory = open("assest\\HistoryChat.txt","r")
+        DataHistory = FileHistory.read()
+        FileHistory.close()
+
+        if str(Data)==str(DataHistory):
+                sleep(0.5)
+                pass
+
+        else:
+                QuerySender(Query=Data)
+                ButtonClicker()
+                CheckBackSoon(Query=Data)
+                NotNowChecker()
+                AnswerReturn(Query=Data)
+                FileReadNow = open("assest\\piHistory.txt","w")
+                NewDataRead = int(DataRead) + 1
+                FileReadNow.write(str(NewDataRead))
+                FileReadNow.close()
+
+                FileHistory = open("assest\\HistoryChat.txt","w")
+                FileHistory.write(Data)
+                FileHistory.close()
+    
+     except:
+                pass
+        
+    #     try:
+    #         QuerySender(Query=Query)
+    #         ButtonClicker()
+    #         CheckBackSoon(Query=Query)
+    #         NotNowChecker()
+    #         AnswerReturn(Query=Query)
+    #         FileReadNow = open("assest\\piHistory.txt","w")
+    #         NewDataRead = int(DataRead) + 1
+    #         FileReadNow.write(str(NewDataRead))
+    #         FileReadNow.close()
+
+    #     except Exception as e:
+    #         print(e)
+        
