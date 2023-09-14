@@ -4,10 +4,10 @@
 
 ## # **Amigo**
 Amigo is an personal AI assistant based on python.
-> Note ⚠️: Amigo is under development and it may not perform as it should. Features are under development.
+> Note ⚠️: Amigo is under development and it may not perform as it should. Features are under development. This version is suitable for daily usage.
 ## Features
 
-- Support GPT-4 & Bard as brain engine.
+- Support GPT-4, Bard and PI AI as brain engine.
 - Clean & Detailed Code
 - Ability to switch between brain engines(SOON!).
 - Free of rate limited API (web scraping using selenium).
@@ -19,13 +19,13 @@ Amigo is an personal AI assistant based on python.
 
 
 
-####  Install git and run
+####  Install git and run git bash
 ```bash
-git clone https://github.com/notsnipc/{project_name}
+git clone https://github.com/notsnipc/Amigo
 ```
 
 ```bash
-cd {project_name}
+cd Amigo
 ```
 
 
