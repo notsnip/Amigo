@@ -49,7 +49,9 @@ pip install --r requirements.txt
     
 ## Setup
 
-#### Make sure Chome Driver is compatible with your existing installation of Chrome. Try updating your chrome.
+#### Make sure Chome Driver is compatible with your existing installation of Chrome.
+
+### Pi AI & ChatGPT does not need individual config.
 
 ### Bard Setup
 
