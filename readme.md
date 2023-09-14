@@ -2,7 +2,7 @@
 
 
 
-## # **Amigo**
+## **Amigo**
 Amigo is an personal AI assistant based on python.
 > Note ⚠️: Amigo is under development and it may not perform as it should. Features are under development. This version is suitable for daily usage.
 ## Features
