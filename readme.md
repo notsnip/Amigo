@@ -1,5 +1,5 @@
+![Logo](https://gcdnb.pbrd.co/images/Z1OguR6qutyb.png?o=1)
 
-![Logo](https://cdn4.iconfinder.com/data/icons/modern-technologies/32/technology_Voice_assistant-512.png)
 
 
 ## # **Amigo**
