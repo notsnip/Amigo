@@ -22,13 +22,13 @@ driver.get(link)
 # File Operations :- Writing, Reading
 
 def FileReader():
-    File = open("assest/Chatnumber.txt","r")
+    File = open("./src/files/records/Chatnumber.txt","r")
     Data = File.read()
     File.close()
     return Data
 
 def FileWriter(Data):
-    File = open("assest/Chatnumber.txt","w")
+    File = open("./src/files/records/Chatnumber.txt","w")
     File.write(Data)
     File.close()
 
@@ -72,10 +72,10 @@ while True:
         
     try:
 
-        File = open("assest\\speech.txt","r")
+        File = open(r"..\files\records\speech.txt","r")
         Data = File.read()
         File.close()
-        FileHistory = open("assest\\HistoryChat.txt","r")
+        FileHistory = open(r"..\files\records\HistoryChat.txt","r")
         DataHistory = FileHistory.read()
         FileHistory.close()
 
@@ -89,7 +89,7 @@ while True:
                 Result = ChatGPTBrain(Query=Data)
                 print(Result)
 
-                FileHistory = open("assest\\HistoryChat.txt","w")
+                FileHistory = open(r"..\files\records\HistoryChat.txt","w")
                 FileHistory.write(Data)
                 FileHistory.close()
     

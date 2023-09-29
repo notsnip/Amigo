@@ -5,7 +5,9 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 import warnings
 from selenium.webdriver.chrome.service import Service
+output_file_path = r"..\files\records\speech.txt"
 
+print(output_file_path)
 # Ignore unnecessary warnings
 warnings.simplefilter("ignore")
 print("Initializing...")
@@ -14,12 +16,12 @@ try:
     url = "https://dictation.io/speech"
 
     # Set up Chrome options
-    chrome_driver_path = r"C:\Users\sni\Documents\Amigo\assest\chromedriver.exe"
     chrome_options = Options()
     chrome_options.add_argument("--headless=new")
     chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
     chrome_options.add_argument('--log-level=3')
-    service = Service(chrome_driver_path)
+    # service = Service(chrome_driver_path)
+    service = Service()
     chrome_options.add_argument("--use-fake-ui-for-media-stream")  # Disable UI pop-ups for media access
     chrome_options.add_argument("--use-fake-device-for-media-stream")
     user_agent="Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.2 (KHTML, like Gecko) Chrome/22.0.1216.0 Safari/537.2"
@@ -72,6 +74,6 @@ while True:
         text = text.strip()
         
         # Write the text to a file
-        output_file_path = "assest\\speech.txt"
+
         with open(output_file_path, "w") as file_write:
             file_write.write(text)

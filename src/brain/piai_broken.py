@@ -11,9 +11,9 @@ import pathlib
 warnings.simplefilter("ignore")
 url = "https://pi.ai/talk"
 scriptDirectory = pathlib.Path().absolute()
-# chrome_driver_path = 'Brain\\chromedriver.exe'
+chrome_driver_path = r"..\files\records\chromedriver.exe"
 chrome_options = Options()
-chrome_options.add_argument("--headless=new")
+# chrome_options.add_argument("--headless=new")
 chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
 chrome_options.add_argument('--log-level=3')
 service = Service()
@@ -22,7 +22,7 @@ chrome_options.add_argument(f'user-agent={user_agent}')
 driver = webdriver.Chrome(service=service, options=chrome_options)
 driver.maximize_window()
 driver.get(url)
-sleep(5)
+sleep(10)
 
 def Introduction():
 
@@ -58,10 +58,10 @@ def Introduction():
     except:
         pass
 
-    FileHistory = open("assest\\Chatnumberpi.txt","w")
+    FileHistory = open(r"..\files\records\Chatnumberpi.txt","w")
     FileHistory.write('1')
     FileHistory.close()
-    FileReadNow = open("assest\\piHistory.txt","w")
+    FileReadNow = open(r"..\files\records\piHistory.txt","w")
     FileReadNow.write('1')
     FileReadNow.close()
 
@@ -160,14 +160,14 @@ def AnswerReturn(Query):
 
                 sleep(0.5)
             
-            FileHistory = open("assest\\Chatnumberpi.txt","w")
+            FileHistory = open(r"..\files\records\Chatnumberpi.txt","w")
             FileHistory.write('1')
             FileHistory.close()
 
             break
         
         else:
-            FileRead = open("assest\\Chatnumberpi.txt","r")
+            FileRead = open(r"..\files\records\Chatnumberpi.txt","r")
             Data = FileRead.read()
             FileRead.close()
 
@@ -203,10 +203,10 @@ def AnswerReturn(Query):
                 break
 
             else:
-                FileRead = open("assest\\Chatnumberpi.txt","r")
+                FileRead = open(r"..\files\records\Chatnumberpi.txt","r")
                 Data = FileRead.read()
                 FileRead.close()
-                FileHistory = open("assest\\Chatnumberpi.txt","w")
+                FileHistory = open(r"..\files\records\Chatnumberpi.txt","w")
                 NewData = int(Data) + 1
                 NewData = str(NewData)
                 FileHistory.write(NewData)
@@ -235,7 +235,7 @@ Introduction()
 while True:
 
     # Query = input("Enter Your Query :")
-    File = open("assest\\piHistory.txt","r")
+    File = open(r"..\files\records\piHistory.txt","r")
     DataRead = File.read()
     File.close()
 
@@ -251,16 +251,16 @@ while True:
         CheckBackSoon(Query=Data)
         NotNowChecker()
         AnswerReturn(Query=Data)
-        FileReadNow = open("assest\\piHistory.txt","w")
+        FileReadNow = open(r"..\files\records\piHistory.txt","w")
         FileReadNow.write('1')
         FileReadNow.close()
     else:
      try:
 
-        File = open("assest\\speech.txt","r")
+        File = open(r"..\files\records\speech.txt","r")
         Data = File.read()
         File.close()
-        FileHistory = open("assest\\HistoryChat.txt","r")
+        FileHistory = open(r"..\files\records\HistoryChat.txt","r")
         DataHistory = FileHistory.read()
         FileHistory.close()
 
@@ -274,12 +274,12 @@ while True:
                 CheckBackSoon(Query=Data)
                 NotNowChecker()
                 AnswerReturn(Query=Data)
-                FileReadNow = open("assest\\piHistory.txt","w")
+                FileReadNow = open(r"..\files\records\piHistory.txt","w")
                 NewDataRead = int(DataRead) + 1
                 FileReadNow.write(str(NewDataRead))
                 FileReadNow.close()
 
-                FileHistory = open("assest\\HistoryChat.txt","w")
+                FileHistory = open(r"..\files\records\HistoryChat.txt","w")
                 FileHistory.write(Data)
                 FileHistory.close()
     
