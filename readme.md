@@ -1,7 +1,7 @@
 
 ## **Amigo** 🪴
 Amigo is a personal AI assistant based on python.
-> ;-; Few days ago, Pi & GPT-4 were working fine but because of some formatting in Pi's website the AI engine is broken and none of the engines are working. Overall the whole project is messed up.
+> ;-; Unfortunately, AI engines are broken and not the new speech recognition method is functioning properly. Overall the whole project is messed up.
 
 ## Features (Almost Broken)
 
