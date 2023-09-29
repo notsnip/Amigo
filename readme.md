@@ -22,9 +22,6 @@ cd Amigo
 
 
 #### Install required modules
-
-
-#### Dependencies
 - bardapi
 - keyboard
 - pyautogui
@@ -35,13 +32,13 @@ cd Amigo
 pip install --r requirements.txt
 ```
 
+#### Chome Driver now comes bundled with Selenium.
 
-
-
+<!-- 
     
 ## Setup
+ -->
 
-#### Chome Driver now comes bundled with Selenium.
 
 <!-- ### Bard Setup
 
